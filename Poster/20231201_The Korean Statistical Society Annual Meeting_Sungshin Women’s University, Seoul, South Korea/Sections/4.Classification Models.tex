@@ -1,0 +1,17 @@
+\section*{\tituloA{4.Classification Models}}
+\begin{flushleft}
+To take advantage of the \textbf{inherent group information} defined by ROIs, Group penalties were applied to logistic models.
+\end{flushleft}
+
+    \centering 
+    \begin{itemize}
+    \item \small Group LASSO: 
+    \[ \lambda \sum_{g=1}^{G} \sqrt{p_g} \| \beta_g \|_2 \]
+    \item \small Group Elastic-Net: 
+    \[ \lambda \left( \alpha \sum_{g=1}^{G} \| \beta_g \|_1 + \frac{1-\alpha}{2} \sum_{g=1}^{G} \| \beta_g \|_2^2 \right) \]
+    \item \small Group MCP (Minimax Concave Penalty): 
+    \[ \sum_{g=1}^{G} \left( \rho(\| \beta_g \|_2; \lambda, \gamma) \right) \]
+    \item \small Group SCAD (Smoothly Clipped Absolute Deviation): 
+    \[ \sum_{g=1}^{G} \left( \phi(\| \beta_g \|_2; \lambda, a) \right) \]
+\end{itemize}
+

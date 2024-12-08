@@ -1,0 +1,120 @@
+%%poster03.tex with figures in TikZ
+\documentclass[36pt]{sciposter}
+\usepackage{preposterTikz} %package with the preamble.
+\usepackage{fourier} 
+    \usepackage{caption} 
+\usepackage{array}
+\usepackage{tabularx} % for 'tabularx' environment
+\usepackage{graphicx} % 그래픽을 위한 패키지
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{varwidth}
+\usepackage{adjustbox}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+
+
+
+
+\geometry{paperwidth=90cm,paperheight=100cm,centering,textwidth=85cm,textheight=94cm,left=0cm,top=2cm}
+\pgfplotsset{compat=1.18}
+%**********************************************
+% Colors
+\definecolor{col_CN}{HTML}{2215EA}
+\definecolor{col_MCI}{HTML}{15EA3C}
+\definecolor{col_AD}{HTML}{EA1515}
+
+
+%==================================
+\captionsetup[figure]{labelformat=empty} % figure 캡션의 라벨 포맷을 비움
+
+
+
+%**********************************************
+\begin{document}
+
+\onehalfspacing
+
+%%Fill in the commands below with your details.
+\newcommand{\tituloposter}{Functional Data Analysis Approach on Functional Connectivity from}%%title of the poster
+\newcommand{\titulogrande}{Resting-State fMRI for Classification of Dementia Patients} 
+
+%%Fill in WITHIN THE parenthesis only if the title does not fit on one line.
+%%ATTENTION: If you are not going to use the second line, just do not write anything between "{}".
+
+% \newcommand{\nome}{Ido Ji$^{(a)}$, first name1, LAST NAME 2$^{(b)}$, first name2, LAST NAME 3$^{(b)}$, first name3} %%your name
+
+\newcommand{\nome}{Ido Ji$^{(a)}$, Eunjee Lee$^{(b)}$} %%your name
+\newcommand{\instituicao}{$(a)$ Department of Bio AI Convergence, Chungnam National University, $(b)$. Department of Information Statistics, Chungnam National University} %%institution
+
+%%title made with TikZ (using \newcommand).
+% \titulo{sifsc}{WhiteSquare}{BoxCol} %blue
+%Place the SIICUSP logo instead of the white square
+
+
+% 타이틀 기준 왼쪽 로고 : WhiteSquare (아무것도 안 넣는 경우)
+% 타이틀 기준 오른쪽 로고 : CNU
+\titulo{WhiteSquare}{CNU.png}{BoxCol} %blue
+
+
+%%title made with TikZ (using \newcommand).
+% \titulo{sifsc}{
+%     \includegraphics[width=1cm]{Figures/ci_simbol_v2.png} % 이미지 크기 및 파일명 조정
+% }{BoxCol} %blue
+
+    
+
+\vspace{4cm} %space
+
+
+
+%=======================================
+% Abstract
+%=======================================
+% \input{Sections/0.Abstract.tex}
+
+
+
+\begin{multicols}{2}
+%%Paragraph.
+\setlength{\parindent}{3em}
+
+
+%=======================================
+\input{Sections/1.Motivation}
+%=======================================
+\input{Sections/2.Methodology}
+\columnbreak
+%=======================================
+% \input{Sections/Preprocessing}
+%=======================================
+\input{Sections/3.Demographics}
+%=======================================
+\input{Sections/4.Classification Models}
+%=======================================
+\input{Sections/5.Results}
+%=======================================
+% \input{Sections/References}
+%=================================================
+\input{Sections/Acknowledgments}
+
+
+
+\end{multicols}
+
+\end{document}
